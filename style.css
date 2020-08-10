@@ -1,0 +1,33 @@
+body {
+	margin: 0;
+}
+
+
+#container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+#controls {
+    border: 1px solid black;
+    width: 20%;
+    
+    text-align: center;
+    
+}
+
+#canvas {
+   
+  height: 750px;
+  width: 750px;
+  border: 1px solid black;
+ display: grid;
+}
+
+
+.cell {
+	border: gray 1px dashed;
+}
+
