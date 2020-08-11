@@ -14,29 +14,22 @@ function makeGrid(x = initSize) {
 		const cell = document.createElement("div");
 		cell.classList.add("cell");
 			cell.addEventListener('mouseenter', () => {
-            cell.style.background = document.querySelector('input[type="color"]').value;
-            
-
-            
+            cell.style.background = document.querySelector('input[type="color"]').value;   
   	});
         canvas.appendChild(cell);
-        
-	
     }
-    
-    
 }
 
 makeGrid()
 
-
-
+function clearAll() {
+    clearGrid();
+    makeGrid();
+}
 
 function clearGrid() {
 	canvas.innerHTML = "";
 }
-
-
 
 function setGridSize() {
     initSize = prompt("Enter a number");
@@ -44,12 +37,3 @@ function setGridSize() {
     makeGrid();
     
 }
-function clearAll() {
-    cells.forEach((cell) => {
-        cell.style.background = 'white';
-  });
-}
-
-let cells = document.querySelectorAll(".cell");
-clr.addEventListener('click', clearAll);
-
